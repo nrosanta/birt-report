@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">539</property>
+        </structure>
+        <structure>
+            <property name="name">WORKSHEETS</property>
+            <property name="id">539</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">72</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">sharedDS.rptlibrary</property>
+            <property name="namespace">sharedDS</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="report_type" id="606" extends="sharedDS.report_type"/>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="sharedDefects" id="604"
+ extends="sharedDS.sharedDefects"/>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="sharedTestcases" id="607"
+ extends="sharedDS.sharedTestcases"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="All" id="26">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Total</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["Key"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">Aging</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete")&#13;
+	0;&#13;
+else&#13;
+	BirtDateTime.diffDay(row["Created"],new Date())</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Project</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project</text-property>
+                    <text-property name="heading">Project</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Key</text-property>
+                    <text-property name="heading">Key</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Summary</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Summary</text-property>
+                    <text-property name="heading">Summary</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">API</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">API</text-property>
+                    <text-property name="heading">API</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sprint</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Sprint</text-property>
+                    <text-property name="heading">Sprint</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">fixVersion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">fixVersion</text-property>
+                    <text-property name="heading">fixVersion</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Root Cause</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Root Cause</text-property>
+                    <text-property name="heading">Root Cause</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Labels</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Labels</text-property>
+                    <text-property name="heading">Labels</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Logged by Tester(Y/N)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Logged by Tester(Y/N)</text-property>
+                    <text-property name="heading">Logged by Tester(Y/N)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporter</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporter</text-property>
+                    <text-property name="heading">Reporter</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Status</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Status</text-property>
+                    <text-property name="heading">Status</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Priority</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Priority</text-property>
+                    <text-property name="heading">Priority</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Severity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Severity</text-property>
+                    <text-property name="heading">Severity</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Env</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Env</text-property>
+                    <text-property name="heading">Env</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Resolution</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Resolution</text-property>
+                    <text-property name="heading">Resolution</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Assignee</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Assignee</text-property>
+                    <text-property name="heading">Assignee</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Component</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Component</text-property>
+                    <text-property name="heading">Component</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Created</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Created</text-property>
+                    <text-property name="heading">Created</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Updated</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Updated</text-property>
+                    <text-property name="heading">Updated</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Resolved</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Resolved</text-property>
+                    <text-property name="heading">Resolved</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ComputedEnv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ComputedEnv</text-property>
+                    <text-property name="heading">ComputedEnv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SortColumn</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SortColumn</text-property>
+                    <text-property name="heading">SortColumn</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Last Synched</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Last Synched</text-property>
+                    <text-property name="heading">Last Synched</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporting St Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporting St Date</text-property>
+                    <text-property name="heading">Reporting St Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporting End date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporting End date</text-property>
+                    <text-property name="heading">Reporting End date</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter"/>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Project</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Summary</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">API</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Sprint</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">fixVersion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Root Cause</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Labels</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Logged by Tester(Y/N)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Reporter</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Priority</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Severity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Env</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Resolution</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Assignee</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Component</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Created</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">Updated</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">Resolved</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">ComputedEnv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">SortColumn</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">Last Synched</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">Reporting St Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">Reporting End date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">Aging</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">sharedDefects</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Project</property>
+                    <property name="nativeName">Project</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Key</property>
+                    <property name="nativeName">Key</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Summary</property>
+                    <property name="nativeName">Summary</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">API</property>
+                    <property name="nativeName">API</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Sprint</property>
+                    <property name="nativeName">Sprint</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">fixVersion</property>
+                    <property name="nativeName">fixVersion</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Root Cause</property>
+                    <property name="nativeName">Root Cause</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Labels</property>
+                    <property name="nativeName">Labels</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Logged by Tester(Y/N)</property>
+                    <property name="nativeName">Logged by Tester(Y/N)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Reporter</property>
+                    <property name="nativeName">Reporter</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Status</property>
+                    <property name="nativeName">Status</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Priority</property>
+                    <property name="nativeName">Priority</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Severity</property>
+                    <property name="nativeName">Severity</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Env</property>
+                    <property name="nativeName">Env</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Resolution</property>
+                    <property name="nativeName">Resolution</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Assignee</property>
+                    <property name="nativeName">Assignee</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Component</property>
+                    <property name="nativeName">Component</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">Created</property>
+                    <property name="nativeName">Created</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">Updated</property>
+                    <property name="nativeName">Updated</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">Resolved</property>
+                    <property name="nativeName">Resolved</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">ComputedEnv</property>
+                    <property name="nativeName">ComputedEnv</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">SortColumn</property>
+                    <property name="nativeName">SortColumn</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">Last Synched</property>
+                    <property name="nativeName">Last Synched</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">Reporting St Date</property>
+                    <property name="nativeName">Reporting St Date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">Reporting End date</property>
+                    <property name="nativeName">Reporting End date</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Project", "Key", "Summary", "API", "Sprint", "fixVersion", "Root Cause", "Labels", "Logged by Tester(Y/N)", "Reporter", "Status", "Priority", "Severity", "Env", "Resolution", "Assignee", "Component", "Created", "Updated", "Resolved", "ComputedEnv", "SortColumn", "Last Synched", "Reporting St Date", "Reporting End date" from "/Users/u381126/Documents/workspace/jira-extract/dataExport/DefectList.xlsx" : {"Project","Project",STRING;"Key","Key",STRING;"Summary","Summary",STRING;"API","API",STRING;"Sprint","Sprint",STRING;"fixVersion","fixVersion",STRING;"Root Cause","Root Cause",STRING;"Labels","Labels",STRING;"Logged by Tester(Y\/N)","Logged by Tester(Y\/N)",STRING;"Reporter","Reporter",STRING;"Status","Status",STRING;"Priority","Priority",STRING;"Severity","Severity",STRING;"Env","Env",STRING;"Resolution","Resolution",STRING;"Assignee","Assignee",STRING;"Component","Component",STRING;"Created","Created",STRING;"Updated","Updated",STRING;"Resolved","Resolved",STRING;"ComputedEnv","ComputedEnv",STRING;"SortColumn","SortColumn",STRING;"Last Synched","Last Synched",STRING;"Reporting St Date","Reporting St Date",STRING;"Reporting End date","Reporting End date",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Project</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Project</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Project</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Key</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Key</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Key</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>API</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>API</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>API</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>fixVersion</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>fixVersion</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>fixVersion</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Root Cause</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Root Cause</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Root Cause</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Labels</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Labels</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Labels</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Logged by Tester(Y/N)</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Logged by Tester(Y/N)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Logged by Tester(Y/N)</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Reporter</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Reporter</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Reporter</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Status</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Status</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Status</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Priority</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Priority</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Priority</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Severity</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Severity</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Severity</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Env</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Env</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Env</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Resolution</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Resolution</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Resolution</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Assignee</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Assignee</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Assignee</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>component</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>component</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>component</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Created</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Created</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Created</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Updated</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Updated</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Updated</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Resolved</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Resolved</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Resolved</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">IssueList</property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="testcases" id="539">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Pass_Percent</property>
+                    <expression name="expression">stat = row["#TC Passed"]/row["#Total TC"]*100&#13;
+if(row["#Total TC"]==0)&#13;
+	stat = 0&#13;
+else&#13;
+	if (row["#TC Passed"]==row["#Total TC"])&#13;
+		stat=100&#13;
+	else&#13;
+		BirtMath.roundUp(stat,2)</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Fail_Percent</property>
+                    <expression name="expression">stat = row["#TC Failed"]/row["#Total TC"]*100&#13;
+if(row["#Total TC"]==0)&#13;
+	stat = 0&#13;
+else&#13;
+	if (row["#TC Failed"]==row["#Total TC"])&#13;
+		stat=100&#13;
+	else&#13;
+		BirtMath.roundUp(stat,2)</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Overall</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["#Total TC"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Pass</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["#TC Passed"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Fail</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["#TC Failed"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Pass_Percent</property>
+                    <expression name="expression">stat = row["Total_Pass"]/row["Total_Overall"]*100&#13;
+if(row["Total_Overall"]==0)&#13;
+	stat = 0&#13;
+else&#13;
+	if (row["Total_Pass"]==row["Total_Overall"])&#13;
+		stat=100&#13;
+	else&#13;
+		BirtMath.roundUp(stat,2)</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Fail_Percent</property>
+                    <expression name="expression">stat = row["Total_Fail"]/row["Total_Overall"]*100&#13;
+if(row["Total_Overall"]==0)&#13;
+	stat = 0&#13;
+else&#13;
+	if (row["Total_Fail"]==row["Total_Overall"])&#13;
+		stat=100&#13;
+	else&#13;
+		BirtMath.roundUp(stat,2)</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">API</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">API</text-property>
+                    <text-property name="heading">API</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">#Total TC</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">#Total TC</text-property>
+                    <text-property name="heading">#Total TC</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">#TC Passed</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">#TC Passed</text-property>
+                    <text-property name="heading">#TC Passed</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">#TC Failed</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">#TC Failed</text-property>
+                    <text-property name="heading">#TC Failed</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">API</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">#Total TC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">#TC Passed</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">#TC Failed</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Pass_Percent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Fail_Percent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Total_Overall</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Total_Pass</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Total_Fail</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Total_Pass_Percent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Total_Fail_Percent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">sharedTestcases</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">API</property>
+                    <property name="nativeName">API</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">#Total TC</property>
+                    <property name="nativeName">#Total TC</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">#TC Passed</property>
+                    <property name="nativeName">#TC Passed</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">#TC Failed</property>
+                    <property name="nativeName">#TC Failed</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "API", "#Total TC", "#TC Passed", "#TC Failed" from "/C:/jira-extract/dataExport/Test_Cases_API.xlsx" : {"API","API",STRING;"#Total TC","#Total TC",STRING;"#TC Passed","#TC Passed",STRING;"#TC Failed","#TC Failed",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>API</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>API</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>API</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>#Total TC</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>#Total TC</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>#Total TC</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>#TC Passed</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>#TC Passed</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>#TC Passed</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>#TC Failed</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>#TC Failed</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>#TC Failed</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Current Sprint</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Current Sprint</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Current Sprint</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Deployed to Prod?</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Deployed to Prod?</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Deployed to Prod?</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Owner</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Owner</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Owner</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Type</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Type</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Type</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Notes</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Notes</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Notes</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">TCs</property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="24">
+            <property name="fontFamily">"tahoma"</property>
+            <property name="fontSize">10pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <label id="246">
+            <property name="comments">Test</property>
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#000000</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Wells Fargo Gateway Defect Metrics Dashboard v1.0 beta</text-property>
+        </label>
+        <data name="banner" id="609">
+            <property name="backgroundAttachment">scroll</property>
+            <property name="backgroundPositionX">0%</property>
+            <property name="backgroundPositionY">0%</property>
+            <property name="backgroundRepeat">repeat</property>
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">10pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="fontStyle">normal</property>
+            <property name="fontVariant">normal</property>
+            <property name="color">#0000FF</property>
+            <property name="textLineThrough">none</property>
+            <property name="textOverline">none</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">none</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="marginTop">0pt</property>
+            <property name="marginLeft">0pt</property>
+            <property name="marginBottom">0pt</property>
+            <property name="marginRight">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="paddingLeft">1pt</property>
+            <property name="paddingBottom">1pt</property>
+            <property name="paddingRight">1pt</property>
+            <property name="letterSpacing">normal</property>
+            <property name="lineHeight">normal</property>
+            <property name="orphans">2</property>
+            <property name="textTransform">none</property>
+            <property name="whiteSpace">normal</property>
+            <property name="widows">2</property>
+            <property name="wordSpacing">normal</property>
+            <property name="display">block</property>
+            <property name="pageBreakAfter">auto</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="pageBreakInside">auto</property>
+            <property name="showIfBlank">false</property>
+            <property name="canShrink">false</property>
+            <property name="overflow">hidden</property>
+            <property name="dataSet">All</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Updated</property>
+                    <text-property name="displayName">Updated</text-property>
+                    <expression name="expression" type="javascript">BirtStr.concat("Reporting Period: 11-01-2017 to ",new Date())</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">var Dt = new Date();&#13;
+strDt = Dt.toString("MMMM yyyy");&#13;
+strDt = BirtStr.concat("Reporting Period: ", dataSetRow["Reporting St Date"], " to ", dataSetRow["Reporting End date"]," [Last updated: ",dataSetRow["Last Synched"],"]");</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">Column Binding</property>
+        </data>
+        <label id="702">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Home (Summary View)</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">metrics-home.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <label id="679">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Breakdown by Priority</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">defects-priority-breakdown.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <label id="720">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Breakdown by Severity</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">defects-severity-breakdown.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <grid id="632">
+            <property name="width">12.333333333333334in</property>
+            <list-property name="visibility">
+                <structure>
+                    <property name="format">all</property>
+                    <expression name="valueExpr" type="javascript">true</expression>
+                </structure>
+            </list-property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="633"/>
+            <column id="634"/>
+            <column id="635">
+                <property name="width">7.041666666666667in</property>
+            </column>
+            <row id="636">
+                <cell id="637">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+            </row>
+            <row id="693">
+                <cell id="694"/>
+                <cell id="695"/>
+                <cell id="696"/>
+            </row>
+            <row id="697">
+                <cell id="698"/>
+                <cell id="699"/>
+                <cell id="700"/>
+            </row>
+            <row id="648">
+                <cell id="649">
+                    <label id="660">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Status</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-status.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="650"/>
+                <cell id="651"/>
+            </row>
+            <row id="652">
+                <cell id="653">
+                    <label id="661">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">All Components By Severity</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-severity.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="654"/>
+                <cell id="655"/>
+            </row>
+            <row id="674">
+                <cell id="675">
+                    <label id="678">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">All Components By Priority</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-priority.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="676"/>
+                <cell id="677"/>
+            </row>
+            <row id="670">
+                <cell id="671"/>
+                <cell id="672"/>
+                <cell id="673"/>
+            </row>
+            <row id="666">
+                <cell id="667">
+                    <label id="680">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">By Environment</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-env.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="668"/>
+                <cell id="669"/>
+            </row>
+            <row id="662">
+                <cell id="663">
+                    <label id="681">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Defect Aging</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-aging.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="664"/>
+                <cell id="665"/>
+            </row>
+            <row id="682">
+                <cell id="683">
+                    <label id="686">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Root Cause</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-rootcause.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="684"/>
+                <cell id="685"/>
+            </row>
+            <row id="687">
+                <cell id="688">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="690"/>
+            </row>
+        </grid>
+        <table id="540">
+            <property name="verticalAlign">middle</property>
+            <property name="dataSet">testcases</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">API</property>
+                    <text-property name="displayName">API</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["API"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">#Total TC</property>
+                    <text-property name="displayName">#Total TC</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["#Total TC"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">#TC Passed</property>
+                    <text-property name="displayName">#TC Passed</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["#TC Passed"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">#TC Failed</property>
+                    <text-property name="displayName">#TC Failed</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["#TC Failed"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Pass_Percent</property>
+                    <text-property name="displayName">Pass_Percent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Pass_Percent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Fail_Percent</property>
+                    <text-property name="displayName">Fail_Percent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Fail_Percent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Overall</property>
+                    <text-property name="displayName">Total_Overall</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total_Overall"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Pass</property>
+                    <text-property name="displayName">Total_Pass</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total_Pass"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Pass_Percent</property>
+                    <text-property name="displayName">Total_Pass_Percent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total_Pass_Percent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Fail</property>
+                    <text-property name="displayName">Total_Fail</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total_Fail"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total_Fail_Percent</property>
+                    <text-property name="displayName">Total_Fail_Percent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total_Fail_Percent"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="574"/>
+            <column id="575"/>
+            <column id="576"/>
+            <column id="577"/>
+            <column id="578"/>
+            <column id="579"/>
+            <header>
+                <row id="580">
+                    <property name="fontWeight">bold</property>
+                    <cell id="581">
+                        <property name="colSpan">6</property>
+                        <property name="rowSpan">1</property>
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="587">
+                            <property name="fontSize">11pt</property>
+                            <text-property name="text">Test Execution Metrics</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="541">
+                    <property name="fontWeight">bold</property>
+                    <cell id="542">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="543">
+                            <text-property name="text">API</text-property>
+                        </label>
+                    </cell>
+                    <cell id="544">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="545">
+                            <text-property name="text">#Total TC</text-property>
+                        </label>
+                    </cell>
+                    <cell id="546">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="547">
+                            <text-property name="text">#TC Passed</text-property>
+                        </label>
+                    </cell>
+                    <cell id="548">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="549">
+                            <text-property name="text">#TC Failed</text-property>
+                        </label>
+                    </cell>
+                    <cell id="550">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="551">
+                            <text-property name="text">Pass %</text-property>
+                        </label>
+                    </cell>
+                    <cell id="552">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="553">
+                            <text-property name="text">Fail %</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="554">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#D4F4F1</property>
+                            <expression name="testExpr" type="javascript">row[0]%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="555">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="556">
+                            <property name="resultSetColumn">API</property>
+                        </data>
+                    </cell>
+                    <cell id="557">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="558">
+                            <property name="resultSetColumn">#Total TC</property>
+                        </data>
+                    </cell>
+                    <cell id="559">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="560">
+                            <property name="resultSetColumn">#TC Passed</property>
+                        </data>
+                    </cell>
+                    <cell id="561">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="562">
+                            <property name="resultSetColumn">#TC Failed</property>
+                        </data>
+                    </cell>
+                    <cell id="563">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="564">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">lt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FF0000</property>
+                                    <expression name="testExpr" type="javascript">row["Pass_Percent"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">100</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">Pass_Percent</property>
+                        </data>
+                    </cell>
+                    <cell id="565">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="566">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">gt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FF0000</property>
+                                    <expression name="testExpr" type="javascript">row["#TC Failed"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">0</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">Fail_Percent</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="590">
+                    <property name="fontSize">10pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="verticalAlign">bottom</property>
+                    <property name="height">0.8cm</property>
+                    <cell id="591">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="597">
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Overall</text-property>
+                        </label>
+                    </cell>
+                    <cell id="592">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="599">
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">###0{RoundingMode=UNNECESSARY}</property>
+                            </structure>
+                            <property name="resultSetColumn">Total_Overall</property>
+                        </data>
+                    </cell>
+                    <cell id="593">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="600">
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">Total_Pass</property>
+                        </data>
+                    </cell>
+                    <cell id="594">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="602">
+                            <structure name="numberFormat">
+                                <property name="category">Fixed</property>
+                                <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">Total_Fail</property>
+                        </data>
+                    </cell>
+                    <cell id="595">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="601">
+                            <structure name="numberFormat">
+                                <property name="category">General Number</property>
+                                <property name="pattern">General Number</property>
+                            </structure>
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">lt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FF0000</property>
+                                    <expression name="testExpr" type="javascript">row["Total_Pass_Percent"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">100</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">Total_Pass_Percent</property>
+                        </data>
+                    </cell>
+                    <cell id="596">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="603">
+                            <structure name="numberFormat">
+                                <property name="category">General Number</property>
+                                <property name="pattern">General Number</property>
+                            </structure>
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">gt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FF0000</property>
+                                    <expression name="testExpr" type="javascript">row["Total_Fail_Percent"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">0</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">Total_Fail_Percent</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="567">
+                    <cell id="568">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="589">
+                            <text-property name="text"> </text-property>
+                        </label>
+                    </cell>
+                    <cell id="569">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                    <cell id="570">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                    <cell id="571">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                    <cell id="572">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                    <cell id="573">
+                        <property name="textAlign">left</property>
+                        <property name="verticalAlign">middle</property>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

@@ -1,0 +1,2225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">URI</property>
+            <property name="id">598</property>
+        </structure>
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">26</property>
+        </structure>
+        <structure>
+            <property name="name">WORKSHEETS</property>
+            <property name="id">26</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="base">s</property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">72</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">sharedDS.rptlibrary</property>
+            <property name="namespace">sharedDS</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="byComponent" id="64">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="bySeverity" id="70">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byPriority" id="71">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byStatus" id="72">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byEnv" id="76">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="bySprint" id="251">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byAging" id="508">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byRootCause" id="517">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="report_type" id="592" extends="sharedDS.report_type"/>
+        <scalar-parameter name="byAging_Closed" id="595">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byAgingCategory" id="704">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="byStatusOpen" id="705">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript"></value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="bySquadName" id="706">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="sortBy">label</property>
+            <property name="sortDirection">asc</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">Apollo</property>
+                </structure>
+                <structure>
+                    <property name="value">Calipso</property>
+                </structure>
+                <structure>
+                    <property name="value">Hubble</property>
+                </structure>
+                <structure>
+                    <property name="value">Juno</property>
+                </structure>
+                <structure>
+                    <property name="value">Magellan</property>
+                </structure>
+                <structure>
+                    <property name="value">Others</property>
+                </structure>
+                <structure>
+                    <property name="value">Pioneer</property>
+                </structure>
+                <structure>
+                    <property name="value">Viking</property>
+                </structure>
+                <structure>
+                    <property name="value">Voyager</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="sharedDefects" id="598"
+ extends="sharedDS.sharedDefects"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.excel.dataSet" name="All" id="26">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Total</property>
+                    <property name="dataType">integer</property>
+                    <property name="aggregateFunction">COUNT</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value">row["Key"]</expression>
+                        </structure>
+                    </list-property>
+                </structure>
+                <structure>
+                    <property name="name">Aging</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete" ||row["Status"]=="Completed")&#13;
+	-1;&#13;
+else&#13;
+	BirtDateTime.diffDay(row["Created"],new Date())</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aging_Closed</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete" || row["Status"]=="Completed")&#13;
+	BirtDateTime.diffDay(row["Created"],row["Updated"]);&#13;
+else&#13;
+	-1;</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Defect_Aging</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete" || row["Status"]=="Completed")&#13;
+	BirtDateTime.diffDay(row["Created"],row["Updated"]);&#13;
+else&#13;
+	BirtDateTime.diffDay(row["Created"],new Date());</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aging_All</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete" ||row["Status"]=="Completed")
+	BirtDateTime.diffDay(row["Created"],row["Updated"]);
+else
+	BirtDateTime.diffDay(row["Created"],new Date());</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aging_Category</property>
+                    <expression name="expression">category ="";
+if (row["Aging_All"]&lt;3)
+	category="0-2 Days";
+else if (row["Aging_All"]&lt;6)
+		category="3-5 Days";
+	else if (row["Aging_All"]&lt;10)
+			category="6-9 Days";
+		else if (row["Aging_All"]&lt;21)
+				category="10-20 Days";
+			else
+				category= "21 plus Days";</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Status_Open</property>
+                    <expression name="expression">if (row["Status"]=="Accepted" || row["Status"]=="Done" || row["Status"]=="Complete" ||row["Status"]=="Completed")
+	false;
+else
+	true;</expression>
+                    <property name="dataType">boolean</property>
+                </structure>
+                <structure>
+                    <property name="name">Squad_Name</property>
+                    <expression name="expression">if (row["Component"].match(".*Juno.*"))
+	squad_name = "Juno"
+else if (row["Component"].match(".*Magellan.*"))
+	squad_name = "Magellan"
+	else if (row["Component"].match(".*Pioneer.*"))
+			squad_name = "Pioneer"
+		else if (row["Component"].match(".*Apollo.*"))
+				squad_name = "Apollo"
+			else if (row["Component"].match(".*Viking.*"))
+					squad_name = "Viking"
+				else if (row["Component"].match(".*Calipso.*"))
+						squad_name = "Calipso"
+					else if (row["Component"].match(".*Hubble.*"))
+							squad_name = "Hubble"
+						else if (row["Component"].match(".*Voyager.*"))
+								squad_name = "Voyager"
+							else if (row["Component"].match(".*Reservations.*"))
+									squad_name = "Calipso"
+								else if (row["Component"].match(".*Customer.*"))
+										squad_name = "Juno"
+									else if (row["Component"].match(".*AAG.*"))
+											squad_name = "Juno"
+										else if (row["Component"].match(".*ACH.*"))
+												squad_name = "Magellan"
+											else if (row["Component"].match(".*AVS.*"))
+													squad_name = "Pioneer"
+												else if (row["Component"].match(".*DTDS.*"))
+														squad_name = "Juno"
+													else if (row["Component"].match(".*AcctTrans.*"))
+															squad_name = "Apollo"
+														else if (row["Component"].match(".*Dev Portal.*"))
+																squad_name = "Hubble"
+															else if (row["Component"].match(".*Discovery.*"))
+																	squad_name = "Juno"
+																else if (row["Component"].match(".*FX.*"))
+																		squad_name = "Viking"
+																	else if (row["Component"].match(".*P1.*"))
+																			squad_name = "Hubble"
+																		else if (row["Component"].match(".*P2C.*"))
+																				squad_name = "Voyager"
+																			else if (row["Component"].match(".*Zycus.*"))
+																					squad_name = "Juno"
+																				else if (row["Component"].match(".*Wires.*"))
+																						squad_name = "Calipso"
+																					else if (row["Component"].match(".*TaxDocs.*"))
+																							squad_name = "Apollo"
+																						else if (row["Component"].match(".*Locations.*"))
+																								squad_name = "Calipso"
+																							else if (row["Component"].match(".*HLS.*"))
+																									squad_name = "Juno"
+																								else if (row["Component"].match(".*Ping.*"))
+																										squad_name = "Pioneer"
+																									else if (row["Component"].match(".*RTIA.*"))
+																											squad_name = "Apollo"
+																										else if (row["Component"].match(".*AcctBal.*"))
+																												squad_name = "Apollo"
+																											else
+																												squad_name="Others"</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Project</property>
+                    <property name="alias">Project</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Project</text-property>
+                    <text-property name="heading">Project</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Key</property>
+                    <property name="alias">Key</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Key</text-property>
+                    <text-property name="heading">Key</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Summary</property>
+                    <property name="alias">Summary</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Summary</text-property>
+                    <text-property name="heading">Summary</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">API</property>
+                    <property name="alias">API</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">API</text-property>
+                    <text-property name="heading">API</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sprint</property>
+                    <property name="alias">Sprint</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Sprint</text-property>
+                    <text-property name="heading">Sprint</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">fixVersion</property>
+                    <property name="alias">fixVersion</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">fixVersion</text-property>
+                    <text-property name="heading">fixVersion</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Root Cause</property>
+                    <property name="alias">Root Cause</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Root Cause</text-property>
+                    <text-property name="heading">Root Cause</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Labels</property>
+                    <property name="alias">Labels</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Labels</text-property>
+                    <text-property name="heading">Labels</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Logged by Tester(Y/N)</property>
+                    <property name="alias">Logged by Tester(Y/N)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Logged by Tester(Y/N)</text-property>
+                    <text-property name="heading">Logged by Tester(Y/N)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporter</property>
+                    <property name="alias">Reporter</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporter</text-property>
+                    <text-property name="heading">Reporter</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Status</property>
+                    <property name="alias">Status</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Status</text-property>
+                    <text-property name="heading">Status</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Priority</property>
+                    <property name="alias">Priority</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Priority</text-property>
+                    <text-property name="heading">Priority</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Severity</property>
+                    <property name="alias">Severity</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Severity</text-property>
+                    <text-property name="heading">Severity</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Env</property>
+                    <property name="alias">Env</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Env</text-property>
+                    <text-property name="heading">Env</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Resolution</property>
+                    <property name="alias">Resolution</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Resolution</text-property>
+                    <text-property name="heading">Resolution</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Assignee</property>
+                    <property name="alias">Assignee</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Assignee</text-property>
+                    <text-property name="heading">Assignee</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Component</property>
+                    <property name="alias">Component</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Component</text-property>
+                    <text-property name="heading">Component</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Created</property>
+                    <property name="alias">Created</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Created</text-property>
+                    <text-property name="heading">Created</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Updated</property>
+                    <property name="alias">Updated</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Updated</text-property>
+                    <text-property name="heading">Updated</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Resolved</property>
+                    <property name="alias">Resolved</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Resolved</text-property>
+                    <text-property name="heading">Resolved</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ComputedEnv</property>
+                    <property name="alias">ComputedEnv</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ComputedEnv</text-property>
+                    <text-property name="heading">ComputedEnv</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SortColumn</property>
+                    <property name="alias">SortColumn</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SortColumn</text-property>
+                    <text-property name="heading">SortColumn</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Last Synched</property>
+                    <property name="alias">Last Synched</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Last Synched</text-property>
+                    <text-property name="heading">Last Synched</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporting St Date</property>
+                    <property name="alias">Reporting St Date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporting St Date</text-property>
+                    <text-property name="heading">Reporting St Date</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Reporting End date</property>
+                    <property name="alias">Reporting End date</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Reporting End date</text-property>
+                    <text-property name="heading">Reporting End date</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Component"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byComponent"].value==null)
+	row["Component"];
+else
+	params["byComponent"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Status"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byStatus"].value==null)
+	row["Status"];
+else
+	params["byStatus"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Severity"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["bySeverity"].value==null)
+	row["Severity"];
+else
+	params["bySeverity"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Priority"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byPriority"].value==null)
+	row["Priority"];
+else
+	params["byPriority"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["ComputedEnv"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byEnv"].value==null)
+	row["ComputedEnv"];
+else
+	params["byEnv"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Sprint"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["bySprint"].value==null)
+	row["Sprint"];
+else
+	params["bySprint"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Aging"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byAging"].value==null)
+	row["Aging"];
+else
+	params["byAging"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Root Cause"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byRootCause"].value==null)
+	row["Root Cause"];
+else
+	params["byRootCause"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Aging_Closed"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byAging_Closed"].value==null)&#13;
+	row["Aging_Closed"];&#13;
+else&#13;
+	params["byAging_Closed"].value;</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">match</property>
+                    <expression name="expr" type="javascript">row["Aging_Category"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byAgingCategory"].value==null)
+	row["Aging_Category"];
+else
+	params["byAgingCategory"].value</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">match</property>
+                    <expression name="expr" type="javascript">row["Status_Open"]</expression>
+                    <simple-property-list name="value1">
+                        <value>if (params["byStatusOpen"].value==null)
+	row["Status_Open"];
+else
+	params["byStatusOpen"].value</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">match</property>
+                    <expression name="expr" type="javascript">row["Squad_Name"]</expression>
+                    <simple-property-list name="value1">
+                        <value>params["bySquadName"].value</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Project</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Key</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Summary</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">API</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Sprint</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">fixVersion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Root Cause</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Labels</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Logged by Tester(Y/N)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Reporter</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Priority</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Severity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Env</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Resolution</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Assignee</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Component</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Created</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">Updated</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">Resolved</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">ComputedEnv</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">SortColumn</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">Last Synched</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">Reporting St Date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">Reporting End date</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">Aging</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">Aging_Closed</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">Defect_Aging</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">Aging_All</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">Aging_Category</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">Status_Open</property>
+                        <property name="dataType">boolean</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">Squad_Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">sharedDefects</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Project</property>
+                    <property name="nativeName">Project</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Key</property>
+                    <property name="nativeName">Key</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Summary</property>
+                    <property name="nativeName">Summary</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">API</property>
+                    <property name="nativeName">API</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Sprint</property>
+                    <property name="nativeName">Sprint</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">fixVersion</property>
+                    <property name="nativeName">fixVersion</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Root Cause</property>
+                    <property name="nativeName">Root Cause</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Labels</property>
+                    <property name="nativeName">Labels</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Logged by Tester(Y/N)</property>
+                    <property name="nativeName">Logged by Tester(Y/N)</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Reporter</property>
+                    <property name="nativeName">Reporter</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Status</property>
+                    <property name="nativeName">Status</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Priority</property>
+                    <property name="nativeName">Priority</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Severity</property>
+                    <property name="nativeName">Severity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Env</property>
+                    <property name="nativeName">Env</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Resolution</property>
+                    <property name="nativeName">Resolution</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Assignee</property>
+                    <property name="nativeName">Assignee</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Component</property>
+                    <property name="nativeName">Component</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">Created</property>
+                    <property name="nativeName">Created</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">Updated</property>
+                    <property name="nativeName">Updated</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">Resolved</property>
+                    <property name="nativeName">Resolved</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">ComputedEnv</property>
+                    <property name="nativeName">ComputedEnv</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">SortColumn</property>
+                    <property name="nativeName">SortColumn</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">Last Synched</property>
+                    <property name="nativeName">Last Synched</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">Reporting St Date</property>
+                    <property name="nativeName">Reporting St Date</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">Reporting End date</property>
+                    <property name="nativeName">Reporting End date</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Project", "Key", "Summary", "API", "Sprint", "fixVersion", "Root Cause", "Labels", "Logged by Tester(Y/N)", "Reporter", "Status", "Priority", "Severity", "Env", "Resolution", "Assignee", "Component", "Created", "Updated", "Resolved", "ComputedEnv", "SortColumn", "Last Synched", "Reporting St Date", "Reporting End date" from "/Users/u381126/Documents/workspace/jira-extract/dataExport/DefectList.xlsx" : {"Project","Project",STRING;"Key","Key",STRING;"Summary","Summary",STRING;"API","API",STRING;"Sprint","Sprint",STRING;"fixVersion","fixVersion",STRING;"Root Cause","Root Cause",STRING;"Labels","Labels",STRING;"Logged by Tester(Y\/N)","Logged by Tester(Y\/N)",STRING;"Reporter","Reporter",STRING;"Status","Status",STRING;"Priority","Priority",STRING;"Severity","Severity",STRING;"Env","Env",STRING;"Resolution","Resolution",STRING;"Assignee","Assignee",STRING;"Component","Component",STRING;"Created","Created",STRING;"Updated","Updated",STRING;"Resolved","Resolved",STRING;"ComputedEnv","ComputedEnv",STRING;"SortColumn","SortColumn",STRING;"Last Synched","Last Synched",STRING;"Reporting St Date","Reporting St Date",STRING;"Reporting End date","Reporting End date",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Project</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Project</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Project</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Key</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Key</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Key</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>API</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>API</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>API</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>fixVersion</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>fixVersion</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>fixVersion</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Root Cause</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Root Cause</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Root Cause</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Labels</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Labels</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Labels</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Logged by Tester(Y/N)</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Logged by Tester(Y/N)</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Logged by Tester(Y/N)</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Reporter</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Reporter</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Reporter</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Status</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Status</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Status</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Priority</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Priority</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Priority</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Severity</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Severity</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Severity</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Env</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Env</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Env</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Resolution</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Resolution</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Resolution</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Assignee</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Assignee</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Assignee</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>component</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>component</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>component</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Created</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Created</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Created</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Updated</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Updated</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Updated</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Resolved</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>Resolved</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Resolved</design:label>
+            <design:formattingHints>
+              <design:displaySize>0</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <property name="WORKSHEETS">IssueList</property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="24">
+            <property name="fontFamily">"tahoma"</property>
+            <property name="fontSize">10pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <label id="657">
+            <property name="comments">Test</property>
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#000000</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Wells Fargo Gateway Defect Metrics Dashboard v1.0 beta</text-property>
+        </label>
+        <data name="banner1" id="701">
+            <property name="backgroundAttachment">scroll</property>
+            <property name="backgroundPositionX">0%</property>
+            <property name="backgroundPositionY">0%</property>
+            <property name="backgroundRepeat">repeat</property>
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontSize">10pt</property>
+            <property name="fontWeight">normal</property>
+            <property name="fontStyle">normal</property>
+            <property name="fontVariant">normal</property>
+            <property name="color">#0000FF</property>
+            <property name="textLineThrough">none</property>
+            <property name="textOverline">none</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">black</property>
+            <property name="borderBottomStyle">none</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftColor">black</property>
+            <property name="borderLeftStyle">none</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightColor">black</property>
+            <property name="borderRightStyle">none</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopColor">black</property>
+            <property name="borderTopStyle">none</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="marginTop">0pt</property>
+            <property name="marginLeft">0pt</property>
+            <property name="marginBottom">0pt</property>
+            <property name="marginRight">0pt</property>
+            <property name="paddingTop">1pt</property>
+            <property name="paddingLeft">1pt</property>
+            <property name="paddingBottom">1pt</property>
+            <property name="paddingRight">1pt</property>
+            <property name="letterSpacing">normal</property>
+            <property name="lineHeight">normal</property>
+            <property name="orphans">2</property>
+            <property name="textTransform">none</property>
+            <property name="whiteSpace">normal</property>
+            <property name="widows">2</property>
+            <property name="wordSpacing">normal</property>
+            <property name="display">block</property>
+            <property name="pageBreakAfter">auto</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="pageBreakInside">auto</property>
+            <property name="showIfBlank">false</property>
+            <property name="canShrink">false</property>
+            <property name="overflow">hidden</property>
+            <property name="dataSet">All</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Updated</property>
+                    <text-property name="displayName">Updated</text-property>
+                    <expression name="expression" type="javascript">BirtStr.concat("Reporting Period: 11-01-2017 to ",new Date())</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">var Dt = new Date();&#13;
+strDt = Dt.toString("MMMM yyyy");&#13;
+strDt = BirtStr.concat("Reporting Period: ", dataSetRow["Reporting St Date"], " to ", dataSetRow["Reporting End date"]," [Last updated: ",dataSetRow["Last Synched"],"]");</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">Column Binding</property>
+        </data>
+        <label id="702">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Home (Summary View)</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">metrics-home.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <label id="679">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Breakdown by Priority</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">defects-priority-breakdown.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <label id="703">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <property name="textAlign">left</property>
+            <text-property name="text">Breakdown by Severity</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">defects-severity-breakdown.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <label id="692">
+            <property name="fontFamily">"Tahoma"</property>
+            <property name="fontWeight">normal</property>
+            <text-property name="text">Test Execution Metrics (pending updates)</text-property>
+            <list-property name="action">
+                <structure>
+                    <property name="linkType">drill-through</property>
+                    <property name="reportName">execution-metrics.rptdesign</property>
+                    <property name="targetWindow">_parent</property>
+                    <property name="targetFileType">report-design</property>
+                </structure>
+            </list-property>
+        </label>
+        <grid id="632">
+            <property name="width">12.333333333333334in</property>
+            <list-property name="visibility">
+                <structure>
+                    <property name="format">all</property>
+                    <expression name="valueExpr" type="javascript">true</expression>
+                </structure>
+            </list-property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="633"/>
+            <column id="634"/>
+            <column id="635">
+                <property name="width">7.041666666666667in</property>
+            </column>
+            <row id="636">
+                <cell id="637">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+            </row>
+            <row id="693">
+                <cell id="694"/>
+                <cell id="695"/>
+                <cell id="696"/>
+            </row>
+            <row id="697">
+                <cell id="698"/>
+                <cell id="699"/>
+                <cell id="700"/>
+            </row>
+            <row id="648">
+                <cell id="649">
+                    <label id="660">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Status</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-status.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="650"/>
+                <cell id="651"/>
+            </row>
+            <row id="652">
+                <cell id="653">
+                    <label id="661">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">All Components By Severity</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-severity.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="654"/>
+                <cell id="655"/>
+            </row>
+            <row id="674">
+                <cell id="675">
+                    <label id="678">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">All Components By Priority</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-priority.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="676"/>
+                <cell id="677"/>
+            </row>
+            <row id="670">
+                <cell id="671"/>
+                <cell id="672"/>
+                <cell id="673"/>
+            </row>
+            <row id="666">
+                <cell id="667">
+                    <label id="680">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">By Environment</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-env.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="668"/>
+                <cell id="669"/>
+            </row>
+            <row id="662">
+                <cell id="663">
+                    <label id="681">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Defect Aging</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-aging.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="664"/>
+                <cell id="665"/>
+            </row>
+            <row id="682">
+                <cell id="683">
+                    <label id="686">
+                        <property name="fontFamily">"Tahoma"</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">By Root Cause</text-property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="linkType">drill-through</property>
+                                <property name="reportName">defects-rootcause.rptdesign</property>
+                                <property name="targetWindow">_parent</property>
+                                <property name="targetFileType">report-design</property>
+                            </structure>
+                        </list-property>
+                    </label>
+                </cell>
+                <cell id="684"/>
+                <cell id="685"/>
+            </row>
+            <row id="687">
+                <cell id="688">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="690"/>
+            </row>
+        </grid>
+        <table id="380">
+            <property name="verticalAlign">middle</property>
+            <property name="dataSet">All</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Component</property>
+                    <text-property name="displayName">Component</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Component"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Key</property>
+                    <text-property name="displayName">Key</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Key"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Summary</property>
+                    <text-property name="displayName">Summary</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Summary"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">API</property>
+                    <text-property name="displayName">API</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["API"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Priority</property>
+                    <text-property name="displayName">Priority</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Priority"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Severity</property>
+                    <text-property name="displayName">Severity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Severity"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Status</property>
+                    <text-property name="displayName">Status</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Status"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Env</property>
+                    <text-property name="displayName">Env</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Env"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Sprint</property>
+                    <text-property name="displayName">Sprint</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Sprint"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Created</property>
+                    <text-property name="displayName">Created</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Created"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Updated</property>
+                    <text-property name="displayName">Updated</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Updated"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Reporter</property>
+                    <text-property name="displayName">Reporter</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Reporter"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Assignee</property>
+                    <text-property name="displayName">Assignee</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Assignee"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Root Cause</property>
+                    <text-property name="displayName">Root Cause</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Root Cause"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Resolution</property>
+                    <text-property name="displayName">Resolution</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Resolution"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">fixVersion</property>
+                    <text-property name="displayName">fixVersion</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["fixVersion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Project</property>
+                    <text-property name="displayName">Project</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Project"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Labels</property>
+                    <text-property name="displayName">Labels</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Labels"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total</property>
+                    <text-property name="displayName">Total</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Aging</property>
+                    <text-property name="displayName">Aging</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Aging"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Defect_Aging</property>
+                    <text-property name="displayName">Defect_Aging</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Defect_Aging"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Logged by Tester(Y/N)</property>
+                    <expression name="expression" type="javascript">dataSetRow["Logged by Tester(Y/N)"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Resolved</property>
+                    <expression name="expression" type="javascript">dataSetRow["Resolved"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ComputedEnv</property>
+                    <expression name="expression" type="javascript">dataSetRow["ComputedEnv"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SortColumn</property>
+                    <expression name="expression" type="javascript">dataSetRow["SortColumn"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Last Synched</property>
+                    <expression name="expression" type="javascript">dataSetRow["Last Synched"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Reporting St Date</property>
+                    <expression name="expression" type="javascript">dataSetRow["Reporting St Date"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Reporting End date</property>
+                    <expression name="expression" type="javascript">dataSetRow["Reporting End date"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Aging_Closed</property>
+                    <expression name="expression" type="javascript">dataSetRow["Aging_Closed"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <expression name="expression" type="javascript">var Dt = new Date();strDt = Dt.toString("MMMM yyyy");strDt = BirtStr.concat("Reporting Period: ", row["Reporting St Date"], " to ", row["Reporting End date"]," [Last updated: ",dataSetRow["Last Synched"],"]");</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Squad_Name</property>
+                    <text-property name="displayName">Squad_Name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Squad_Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">1000</property>
+            <column id="474"/>
+            <column id="475">
+                <property name="width">0.5104166666666666in</property>
+            </column>
+            <column id="476">
+                <property name="width">0.8229166666666666in</property>
+            </column>
+            <column id="477">
+                <property name="width">0.3645833333333333in</property>
+            </column>
+            <column id="478"/>
+            <column id="479"/>
+            <column id="480"/>
+            <column id="481"/>
+            <column id="482"/>
+            <column id="483"/>
+            <column id="484"/>
+            <column id="485"/>
+            <column id="486"/>
+            <column id="487"/>
+            <column id="513"/>
+            <column id="711"/>
+            <header>
+                <row id="519">
+                    <property name="backgroundColor">#F7F7F7</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <property name="textAlign">left</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">1cm</property>
+                    <cell id="520">
+                        <property name="textAlign">left</property>
+                        <label id="493">
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Total</text-property>
+                        </label>
+                    </cell>
+                    <cell id="521">
+                        <property name="textAlign">left</property>
+                        <property name="whiteSpace">nowrap</property>
+                        <data id="518">
+                            <property name="fontWeight">bold</property>
+                            <property name="resultSetColumn">Total</property>
+                        </data>
+                    </cell>
+                    <cell id="522">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="523">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="524">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="525">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="526">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="527">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="528">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="529">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="530">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="531">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="532">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="533"/>
+                    <cell id="534"/>
+                    <cell id="707"/>
+                </row>
+                <row id="381">
+                    <property name="backgroundColor">#F7F7F7</property>
+                    <property name="fontSize">9pt</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="textAlign">left</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">1cm</property>
+                    <cell id="382">
+                        <property name="textAlign">left</property>
+                        <label id="383">
+                            <text-property name="text">Component</text-property>
+                        </label>
+                    </cell>
+                    <cell id="384">
+                        <property name="textAlign">left</property>
+                        <property name="whiteSpace">nowrap</property>
+                        <label id="385">
+                            <text-property name="text">Key</text-property>
+                        </label>
+                    </cell>
+                    <cell id="386">
+                        <property name="textAlign">left</property>
+                        <label id="387">
+                            <text-property name="text">Summary</text-property>
+                        </label>
+                    </cell>
+                    <cell id="388">
+                        <property name="textAlign">left</property>
+                        <label id="389">
+                            <text-property name="text">API</text-property>
+                        </label>
+                    </cell>
+                    <cell id="390">
+                        <property name="textAlign">left</property>
+                        <label id="391">
+                            <text-property name="text">Priority</text-property>
+                        </label>
+                    </cell>
+                    <cell id="392">
+                        <property name="textAlign">left</property>
+                        <label id="393">
+                            <text-property name="text">Severity</text-property>
+                        </label>
+                    </cell>
+                    <cell id="394">
+                        <property name="textAlign">left</property>
+                        <label id="395">
+                            <text-property name="text">Status</text-property>
+                        </label>
+                    </cell>
+                    <cell id="396">
+                        <property name="textAlign">left</property>
+                        <label id="397">
+                            <text-property name="text">Env</text-property>
+                        </label>
+                    </cell>
+                    <cell id="398">
+                        <property name="textAlign">left</property>
+                        <label id="399">
+                            <text-property name="text">Sprint</text-property>
+                        </label>
+                    </cell>
+                    <cell id="400">
+                        <property name="textAlign">left</property>
+                        <label id="401">
+                            <text-property name="text">Created</text-property>
+                        </label>
+                    </cell>
+                    <cell id="402">
+                        <property name="textAlign">left</property>
+                        <label id="403">
+                            <text-property name="text">Updated</text-property>
+                        </label>
+                    </cell>
+                    <cell id="404">
+                        <property name="textAlign">left</property>
+                        <label id="405">
+                            <text-property name="text">Reporter</text-property>
+                        </label>
+                    </cell>
+                    <cell id="406">
+                        <property name="textAlign">left</property>
+                        <label id="407">
+                            <text-property name="text">Assignee</text-property>
+                        </label>
+                    </cell>
+                    <cell id="408">
+                        <label id="409">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Root Cause</text-property>
+                        </label>
+                    </cell>
+                    <cell id="510">
+                        <label id="514">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Aging</text-property>
+                        </label>
+                    </cell>
+                    <cell id="708">
+                        <label id="712">
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Squad</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="418">
+                    <property name="fontSize">85%</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="textAlign">left</property>
+                    <property name="verticalAlign">middle</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#E6FFFF</property>
+                            <expression name="testExpr" type="javascript">row[0]%2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="419">
+                        <data id="420">
+                            <property name="resultSetColumn">Component</property>
+                        </data>
+                    </cell>
+                    <cell id="421">
+                        <property name="whiteSpace">nowrap</property>
+                        <data id="422">
+                            <property name="resultSetColumn">Key</property>
+                            <list-property name="action">
+                                <structure>
+                                    <property name="linkType">hyperlink</property>
+                                    <expression name="uri" type="javascript">"http://wfs-jira.wellsfargo.com:8080/browse/"+row["Key"]</expression>
+                                    <property name="targetWindow">_blank</property>
+                                </structure>
+                            </list-property>
+                        </data>
+                    </cell>
+                    <cell id="423">
+                        <property name="width">4cm</property>
+                        <data id="424">
+                            <property name="width">8cm</property>
+                            <property name="resultSetColumn">Summary</property>
+                        </data>
+                    </cell>
+                    <cell id="425">
+                        <data id="426">
+                            <property name="resultSetColumn">API</property>
+                        </data>
+                    </cell>
+                    <cell id="427">
+                        <data id="428">
+                            <property name="resultSetColumn">Priority</property>
+                        </data>
+                    </cell>
+                    <cell id="429">
+                        <data id="430">
+                            <property name="resultSetColumn">Severity</property>
+                        </data>
+                    </cell>
+                    <cell id="431">
+                        <data id="432">
+                            <property name="resultSetColumn">Status</property>
+                        </data>
+                    </cell>
+                    <cell id="433">
+                        <data id="434">
+                            <property name="resultSetColumn">Env</property>
+                        </data>
+                    </cell>
+                    <cell id="435">
+                        <data id="436">
+                            <property name="resultSetColumn">Sprint</property>
+                        </data>
+                    </cell>
+                    <cell id="437">
+                        <data id="438">
+                            <property name="resultSetColumn">Created</property>
+                        </data>
+                    </cell>
+                    <cell id="439">
+                        <data id="440">
+                            <property name="resultSetColumn">Updated</property>
+                        </data>
+                    </cell>
+                    <cell id="441">
+                        <data id="442">
+                            <property name="resultSetColumn">Reporter</property>
+                        </data>
+                    </cell>
+                    <cell id="443">
+                        <data id="444">
+                            <property name="resultSetColumn">Assignee</property>
+                        </data>
+                    </cell>
+                    <cell id="445">
+                        <data id="446">
+                            <property name="resultSetColumn">Root Cause</property>
+                        </data>
+                    </cell>
+                    <cell id="511">
+                        <data id="597">
+                            <property name="resultSetColumn">Defect_Aging</property>
+                        </data>
+                    </cell>
+                    <cell id="709">
+                        <data id="714">
+                            <property name="resultSetColumn">Squad_Name</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="455">
+                    <property name="textAlign">left</property>
+                    <cell id="456">
+                        <label id="535">
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Total</text-property>
+                        </label>
+                    </cell>
+                    <cell id="457">
+                        <data id="536">
+                            <property name="fontWeight">bold</property>
+                            <property name="resultSetColumn">Total</property>
+                        </data>
+                    </cell>
+                    <cell id="458"/>
+                    <cell id="459"/>
+                    <cell id="460"/>
+                    <cell id="461"/>
+                    <cell id="462"/>
+                    <cell id="463"/>
+                    <cell id="464"/>
+                    <cell id="465"/>
+                    <cell id="466"/>
+                    <cell id="467"/>
+                    <cell id="468"/>
+                    <cell id="469"/>
+                    <cell id="512"/>
+                    <cell id="710"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

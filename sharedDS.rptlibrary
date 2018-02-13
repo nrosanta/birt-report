@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201606072122</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">URI</property>
+            <property name="id">5</property>
+            <expression name="value" type="javascript">if ( params["report_type"].value == false ){
+     params["report_type"].value = "/Users/u381126/Documents/workspace/jira-extract/dataExport/DefectList_Nightly.xlsx";
+}else{
+
+     params["report_type"].value = "/Users/u381126/Documents/workspace/jira-extract/dataExport/DefectList.xlsx";
+}</expression>
+        </structure>
+        <structure>
+            <property name="name">INCLCOLUMNNAME</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">INCLTYPELINE</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">URI</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">INCLCOLUMNNAME</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">INCLTYPELINE</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileName</property>
+            <property name="id">6</property>
+        </structure>
+        <structure>
+            <property name="name">OdaConnProfileStorePath</property>
+            <property name="id">6</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="theme">defaultTheme</property>
+    <parameters>
+        <scalar-parameter name="report_type" id="8">
+            <property name="hidden">false</property>
+            <text-property name="promptText">Select a View Type</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="sortBy">label</property>
+            <property name="sortDirection">desc</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">false</property>
+                    <property name="label">Nightly Snapshot</property>
+                </structure>
+                <structure>
+                    <property name="value">true</property>
+                    <property name="label">Realtime View</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">false</property>
+            <structure name="format"/>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="sharedDefects" id="5">
+            <property name="URI">/Users/u381126/Documents/workspace/jira-extract/dataExport/DefectList.xlsx</property>
+            <property name="INCLCOLUMNNAME">yes</property>
+            <property name="INCLTYPELINE">no</property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.excel" name="sharedTestcases" id="6">
+            <property name="URI">/Users/u381126/Documents/workspace/jira-extract/dataExport/Test_Cases_API.xlsx</property>
+            <property name="INCLCOLUMNNAME">yes</property>
+            <property name="INCLTYPELINE">no</property>
+        </oda-data-source>
+    </data-sources>
+    <themes>
+        <theme name="defaultTheme" id="4"/>
+    </themes>
+    <page-setup>
+        <simple-master-page name="NewSimpleMasterPage" id="3"/>
+    </page-setup>
+</library>
